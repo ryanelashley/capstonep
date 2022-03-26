@@ -1,0 +1,91 @@
+
+<h2>{{mode}} Capstone Proposal Form</h2>
+<hr/>
+<div id="serverResult"></div>
+<hr/>
+<form [formGroup]="capstoneForm" class="row g-3" (submit)="saveForm()">
+    <div formGroupName="section1" class="row g-3">
+        <div class="col-md-12" class="form-label"><h3>Section I: Company and Mentor Information</h3></div>
+        <div class="col-md-4">
+            <label for="contact-name" class="form-label">Contact Name: </label> 
+            <input id="contact-name" class="form-control" type="text" formControlName="contactName">
+        </div>
+        <div class="col-md-4">
+            <label for="job-title" class="form-label">Contact Job Title: </label>
+            <input id="job-title" class="form-control" type="text" formControlName="jobTitle"> 
+        </div>
+        <div class="col-md-4">
+            <label for="contact-email" class="form-label">Contact Email: </label>
+            <input id="contact-email" class="form-control" type="text" formControlName="contactEmail">
+        </div>
+        <div class="col-md-4">
+            <label for="contact-phone" class="form-label">Contact Phone: </label>
+            <input id="contact-phone" class="form-control" type="text" formControlName="contactPhone">
+        </div>
+        <div class="col-md-4">
+            <label for="org-name" class="form-label">Organization Name: </label>
+            <input id="org-name" class="form-control" type="text" formControlName="orgName">
+        </div>
+        
+        <div class="col-md-4">
+            <label for="org-website" class="form-label">Organization Website: </label>
+            <input id="org-website" class="form-control" type="text" formControlName="orgWebsite">
+        </div>
+
+        <div formGroupName="orgAddress" class="row g-3">
+            <div class="col-md-12"><h5>Organization Address: </h5></div>
+            <div class="col-md-3">
+                <label for="org-street" class="form-label">Street: </label>
+                <input id="org-street" class="form-control" type="text" formControlName="orgStreet"> 
+            </div>
+            <div class="col-md-3">
+                <label for="org-zip" class="form-label">Zip: </label>
+                <input id="org-zip" class="form-control" type="text" formControlName="orgZip" (blur)="onZipChange()"> 
+            </div>
+            <div class="col-md-3">
+                <label for="org-city" class="form-label">City: </label>
+                <input id="org-city" class="form-control" type="text" formControlName="orgCity"> 
+            </div>
+            <div class="col-md-3">
+                <label for="org-state" class="form-label">State: </label>
+                <input id="org-state" class="form-control" type="text" formControlName="orgState"> 
+            </div>
+        </div> 
+    </div>
+
+    <div formGroupName="section2" class="row g-3">
+    <div class="col-md-12"><h3>Section II: Project for Which Students Will Participate</h3> </div>
+
+    <div class="col-md-6">
+        <label for="project-title" class="form-label">Project Title: </label>
+        <textarea id="project-title" class="form-control" formControlName="projectTitle"> </textarea>
+    </div>
+    <div class="col-md-6">
+        <label for="project-description" class="form-label">Description of Project: </label>
+        <textarea id="project-description" class="form-control" formControlName="projectDescription"> </textarea>
+    </div>
+    <div class="col-md-6">
+        <label for="tech-skills" class="form-label">Technical skills/requirements for ideal Student: </label>
+        <textarea id="tech-skills" class="form-control" formControlName="techSkills"> </textarea>
+    </div>
+    <div class="col-md-6">
+        <label for="duties" class="form-label">Duties of the Students:  </label>
+        <textarea id="duties" class="form-control" formControlName="duties"> </textarea>
+    </div>
+    <div class="col-md-6">
+        <label for="benefits" class="form-label">What is the benefit of this project to the students? </label>
+        <textarea id="benefits" class="form-control" formControlName="studentBenefits"> </textarea>
+    </div>
+    <div class="col-md-6">
+        <label for="providings" class="form-label">What will the company provide to students to carry out this project? </label>
+        <textarea id="providings" class="form-control" formControlName="companyProvidings"> </textarea>
+    </div>
+    
+    </div>
+    <div class="col-12">
+        <hr/>
+        <button type="submit" [disabled]="!capstoneForm.valid">Submit</button>
+        <hr/>
+    </div>
+
+</form>

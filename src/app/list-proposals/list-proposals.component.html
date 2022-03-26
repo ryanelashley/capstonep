@@ -1,0 +1,22 @@
+<div id="proposalTable" *ngIf="proposals">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Mentor</th>
+        <th scope="col">Company</th>
+        <th scope="col">Project Title</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor= "let proposal of proposals">
+          <td>{{proposal._id}}</td>
+          <td>{{proposal.section1[0].contactName}}</td>
+          <td>{{proposal.section1[0].orgName}}</td>
+          <td>{{proposal.section2[0].projectTitle}}</td>
+          <td><button [routerLink]="['/editProposal', proposal._id]">Edit</button> <button (click)="removeProposal(proposal._id)">Delete</button></td>        
+      </tr>
+    </tbody>
+  </table>
+</div>

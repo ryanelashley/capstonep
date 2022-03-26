@@ -1,1 +1,26 @@
 /* You can add global styles to this file, and also import other style files */
+.container {  
+  outline: 1px solid black;
+  /*padding: 5px; 
+  margin: 5px auto;
+  color: #17A2B8; */
+  font-family: Verdana, Geneva, sans-serif;  
+}
+.btn, .btn-outline-secondary {
+  border-color: #17A2B8;
+  background-color: #17A2B8;
+  color: #ffffff;
+}
+.btn:hover, .btn-outline-secondary:hover {
+  background-color: #ffffff;
+  color: #17A2B8;
+  border-color: #17A2B8;
+}
+.show > .btn-outline-secondary.dropdown-toggle {
+  color: #ffffff;
+  background-color: #17A2B8;
+  border-color: #17A2B8;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
